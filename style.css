@@ -1,0 +1,453 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+    color: var(--dunkelgrün);
+    font-weight: bold;
+}
+
+:root {
+    --hellgrün: #a7c957;
+    --dunkelgrün: #386641;
+    --rot: #BC4749;    
+}
+
+
+.error {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1920px) {
+    #headersection {       
+        background-color: #fff;
+        width: 100%;
+        height: 200px;
+        padding-top: 20px;        
+        padding-right: 20px;    
+        border: 0px solid green;
+
+    }
+    .headercontent {
+        width: 100%;
+        height: 180px;
+        padding-top: 50px;                       
+        background-color: var(--hellgrün); 
+        border: 0px solid blue;        
+    }
+
+    .headertext {
+        position: absolute;
+        left: 10px;        
+        font-family: Righteous;
+        font-size: 125px;       
+        color: #fff;
+
+    }
+    #welcome-info {
+        width: 50%;
+        height: 100px;
+        padding: 10px;
+        margin: auto;
+        border: 0px solid red;
+        
+    }    
+    .grid-section {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-area: auto auto auto auto auto auto;              
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin: auto;
+        border: 0px solid pink;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1px;        
+    }
+
+    .grid-item {
+        border: 0px solid purple;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1px;
+    }    
+    .id1 {        
+        grid-area: 1 / 1 / 2 / 2;
+        margin-right: 10px;
+    }
+    .id2 {
+        grid-area: 1 / 2 / 2 / 3;
+        margin-left: 10px; 
+        
+    }
+    .id3 {
+        grid-area: 2 / 1 / 3 / 2;
+        margin-right: 10px;
+    }
+    .id4 {
+        grid-area: 2 / 2 / 3 / 3;
+        margin-left: 10px; 
+    }
+    .id5 {        
+        grid-area: 3 / 1 / 6 / 2;
+        margin-right: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1px;
+    }  
+    .id6 {       
+        grid-area: 3 / 2 / 4 / 3;
+        margin-left: 10px; 
+    }
+    .id7 {  
+        grid-area: 4 / 2 / 5 / 3;
+        margin-left: 10px; 
+    }
+    .id8 {        
+        grid-area: 5 / 2 / 6 / 3;
+        margin-left: 10px; 
+    }
+
+    .sub-flex1 {
+        display: flex;
+        flex-direction: row;        
+        border: 0px solid blue
+    }
+
+    .sub-flex2 {
+        display: flex;
+        flex-direction: row;
+        height: 15px;
+        color: var(--rot);
+    }
+
+    .checkboxtitle { 
+        position: relative;
+        top: 12px;         
+        border: 0px solid yellow;       
+    }
+    input[type=text]  {
+        background-color: var(--hellgrün);
+        width: 100%;        
+        padding: 10px;
+        border: none;   
+        color: #fff;
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 10px;       
+    }
+    .checkboxcontainer input[type=checkbox] {
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+ 
+    .checkboxcontainer {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-left: 35px;
+        padding-right: 50px;
+        margin-bottom: 12px;        
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: var(--hellgrün);
+    }
+    .checkmark::after {
+        content: "";
+        position: absolute;  
+        display: none;
+    }
+    .checkboxcontainer .checkmark::after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0px 3px 3px 0px;
+        transform: rotate(45deg);
+    }
+    .checkboxcontainer input:checked ~ .checkmark::after {
+        display: block;
+    }
+    .errorsection {
+        color: var(--rot);
+        padding-top: 5px;
+        padding-bottom: 10px;         
+    }
+
+    .submitsection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px; 
+        background-color: var(--hellgrün);
+        border: 0px solid red; 
+    }
+
+    .submitcontainer {                     
+        font-size: 20px;
+        color: #fff;        
+        border: 0px solid blue;        
+    }
+
+    .submitcontainer input[type=submit] {        
+        opacity: 0;      
+        cursor: pointer;        
+    }
+    .submitarrow { 
+        color: #fff;
+        font-size: 40px;
+        border: 0px solid yellow;
+        padding-bottom: 5px;
+        padding-right: 10px;
+    }
+    .helthi-footer {
+        width: 100%;
+        height: 200px;
+        padding-top: 70px;
+        background-color: #fff;              
+        border: 0px solid blue;
+    }
+
+    .footertext {
+        position: absolute;
+        right: 20px;        
+        font-family: Righteous;
+        font-size: 125px;
+        color: var(--hellgrün);
+
+    }
+    .thankyou-container {
+        width: 50%;
+        height: auto;
+        margin: auto;
+        border: 0px solid red;
+
+    }
+
+    .customerdata-container {
+        width: 50%;
+        height: auto;
+        margin: auto;
+        border: 0px solid var(--hellgrün);
+    }
+}
+@media screen and (max-width: 2560px) {
+    #headersection {       
+        background-color: #fff;
+        width: 100%;
+        height: 200px;
+        padding-top: 20px;        
+        padding-right: 20px;    
+        border: 0px solid green;
+    }
+    .headercontent {
+        width: 100%;
+        height: 180px;
+        padding-top: 50px;                       
+        background-color: var(--hellgrün); 
+        border: 0px solid blue;        
+    }
+
+    .headertext {
+        position: absolute;
+        left: 10px;        
+        font-family: Righteous;
+        font-size: 125px;       
+        color: #fff;
+    }
+    #welcome-info {
+        width: 50%;
+        height: 100px;
+        padding: 10px;
+        margin: auto;
+        border: 0px solid red;
+    }    
+    .grid-section {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-area: auto auto auto auto auto auto;              
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin: auto;
+        border: 0px solid pink;        
+    }
+
+    .grid-item {
+        border: 0px solid purple
+    }    
+    .id1 {        
+        grid-area: 1 / 1 / 2 / 2;
+        margin-right: 10px;
+    }
+    .id2 {
+        grid-area: 1 / 2 / 2 / 3;
+        margin-left: 10px; 
+    }
+    .id3 {
+        grid-area: 2 / 1 / 3 / 2;
+        margin-right: 10px;
+    }
+    .id4 {
+        grid-area: 2 / 2 / 3 / 3;
+        margin-left: 10px; 
+    }
+    .id5 {        
+        grid-area: 3 / 1 / 6 / 2;
+        margin-right: 10px;
+    }  
+    .id6 {       
+        grid-area: 3 / 2 / 4 / 3;
+        margin-left: 10px; 
+    }
+    .id7 {  
+        grid-area: 4 / 2 / 5 / 3;
+        margin-left: 10px; 
+    }
+    .id8 {        
+        grid-area: 5 / 2 / 6 / 3;
+        margin-left: 10px; 
+    }
+
+    .sub-flex1 {
+        display: flex;
+        flex-direction: row;        
+        border: 0px solid blue
+    }
+
+    .sub-flex2 {
+        display: flex;
+        flex-direction: row;
+        height: 15px;
+        color: var(--rot);
+    }
+
+    .checkboxtitle { 
+        position: relative;
+        top: 12px;         
+        border: 1px solid yellow;       
+    }
+    input[type=text]  {
+        background-color: var(--hellgrün);
+        width: 100%;        
+        padding: 10px;
+        border: none;   
+        color: #fff;
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 10px;       
+    }
+    .checkboxcontainer {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        padding-right: 50px;
+        margin-bottom: 12px;        
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .checkboxcontainer input[type=checkbox] {
+        visibility: hidden;
+        cursor: pointer;
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: var(--hellgrün);
+    }
+    .checkmark::after {
+        content: "";
+        position: absolute;  
+        display: none;
+    }
+    .checkboxcontainer .checkmark::after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0px 3px 3px 0px;
+        transform: rotate(45deg);
+    }
+    .checkboxcontainer input:checked ~ .checkmark::after {
+        display: block;
+    }
+    .errorsection {
+        color: var(--rot);
+        padding-top: 5px;
+        padding-bottom: 10px;         
+    }
+
+    .submitsection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px; 
+        background-color: var(--hellgrün);
+        border: 0px solid red; 
+    }
+
+    .submitcontainer {                     
+        font-size: 20px;
+        color: #fff;        
+        border: 0px solid blue;        
+    }
+
+    .submitcontainer input[type=submit] {        
+        opacity: 0;      
+        cursor: pointer;        
+    }
+    .submitarrow { 
+        color: #fff;
+        font-size: 40px;
+        border: 0px solid yellow;
+        padding-bottom: 5px;
+        padding-right: 10px;
+    }
+    .helthi-footer {
+        width: 100%;
+        height: 200px;
+        padding-top: 70px;
+        background-color: #fff;              
+        border: 0px solid blue;
+    }
+
+    .footertext {
+        position: absolute;
+        right: 20px;        
+        font-family: Righteous;
+        font-size: 125px;
+        color: var(--hellgrün);
+    }
+    .thankyou-container {
+        width: 50%;
+        height: auto;
+        margin: auto;
+        border: 1px solid red;
+    }
+
+    .customerdata-container {
+        width: 50%;
+        height: auto;
+        margin: auto;
+        border: 5px solid var(--hellgrün);
+    }
+}

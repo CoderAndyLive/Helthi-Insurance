@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helthi - Aufnahmeformular</title>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Lato:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="headersection">
+    <div class="headercontent">
+      <h1 class="headertext">helthi</h1>
+    </div>
+  </header>
+  <div class="introsection">
+    <div class="introtext">
+      <h2 class="introheader" style="margin-top: 50px; text-align: center;">Willkommen bei Helthi, ihrer unkomplizierten Krankenkasse!</h2>
+      <p class="introparagraph" style="text-align: center; margin-bottom: 50px;">Um ihre Anmeldung abzuschliessen brauchen wir von ihnen noch einige Angaben</p>
+    </div>
+  <div class="container">
+    <form action="submit.php" method="post">
+      <div class="grid-section">
+        <div class="grid-item id1">
+          <label for="jahrgang">Jahrgang</label>
+          <input type="text" id="jahrgang" name="jahrgang" required />
+        </div>
+        <div class="grid-item id2">
+          <label for="groesse">Grösse (cm)</label>
+          <input type="text" id="groesse" name="groesse" required />
+        </div>
+        <div class="grid-item id3">
+          <label for="gewicht">Gewicht (kg)</label>
+          <input type="text" id="gewicht" name="gewicht" required />
+        </div>
+        <div class="grid-item id4">
+          <label for="ahv-nummer">AHV-Nummer</label>
+          <input type="text" id="ahv-nummer" name="ahv_nummer" required />
+        </div>
+        <fieldset class="grid-item id5">
+          <legend>Sportarten (min. 3 - max. 5)</legend>
+          <label class="checkboxcontainer">Fitness
+            <input type="checkbox" id="fitness" name="sportarten[]" value="Fitness" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Tennis
+            <input type="checkbox" id="tennis" name="sportarten[]" value="Tennis" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Fussball
+            <input type="checkbox" id="fussball" name="sportarten[]" value="Fussball" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Jogging
+            <input type="checkbox" id="jogging" name="sportarten[]" value="Jogging" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Volleyball
+            <input type="checkbox" id="volleyball" name="sportarten[]" value="Volleyball" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Crossfit
+            <input type="checkbox" id="crossfit" name="sportarten[]" value="Crossfit" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Hockey
+            <input type="checkbox" id="hockey" name="sportarten[]" value="Hockey" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Rudern
+            <input type="checkbox" id="rudern" name="sportarten[]" value="Rudern" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Klettern
+            <input type="checkbox" id="klettern" name="sportarten[]" value="Klettern" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Aerobic
+            <input type="checkbox" id="aerobic" name="sportarten[]" value="Aerobic" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Gymnastik
+            <input type="checkbox" id="gymnastik" name="sportarten[]" value="Gymnastik" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Andere
+            <input type="checkbox" id="andere" name="sportarten[]" value="Andere" />
+            <span class="checkmark"></span>
+          </label>
+        </fieldset>
+        <fieldset class="grid-item id6">
+          <legend>Newsletter</legend>
+          <label class="checkboxcontainer">Ja
+            <input type="radio" id="ja" name="newsletter" value="Ja" checked />
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkboxcontainer">Nein
+            <input type="radio" id="nein" name="newsletter" value="Nein" />
+            <span class="checkmark"></span>
+          </label>
+        </fieldset>
+        <div class="submitsection grid-item id7">
+          <div class="submitcontainer">
+            <input type="submit" value="Absenden" />
+            <span class="submitarrow">→</span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <footer class="helthi-footer">
+    <div class="footertext">helthi</div>
+  </footer>
+</body>
+</html>
